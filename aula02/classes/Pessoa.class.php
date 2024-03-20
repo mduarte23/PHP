@@ -8,6 +8,18 @@ Class Pessoa{
     public $Escolaridade;
     public $Salario;
 
+    #criando um costrutor
+    function __construct($codigo, $nome, $altura, $idade, $nascimento, $escolaridade, $salario){
+        $this->Codigo = $codigo;
+        $this->Nome = $nome;
+        $this->Altura = $altura;
+        $this->Idade = $idade;
+        $this->Nascimento = $nascimento;
+        $this->Escolaridade = $escolaridade;
+        $this->Salario = $salario;
+
+    }
+
     #metodo para Crescer
     #aumenta  a altura em centimetros
     function Crescer($centimetros){
@@ -29,5 +41,11 @@ Class Pessoa{
         if ($anos > 0){
             $this->Idade += $anos;
         }
+    }
+
+    #metodo destrutor
+    #finaliza o objeto
+    function __destruct(){
+        echo "Objeto {$this->Nome} finalizando...<br>";
     }
 }

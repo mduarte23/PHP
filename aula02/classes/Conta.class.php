@@ -8,6 +8,19 @@ Class Conta {
     public $Saldo;
     public $Cancelada;
 
+    #criando um cronstrutor
+    function __construct($agencia, $codigo, $dataDeCriacao, $titular, $senha, $saldo){
+        $this->Agencia = $agencia;
+        $this->Codigo = $codigo;
+        $this->DataDeCriacao = $dataDeCriacao;
+        $this->Titular = $titular;
+        $this->Senha = $senha;
+
+        #chama outro metodo da Classe
+        $this->Depositar($saldo);
+        $this->Cancelada = false;
+    }
+
     #metodo retirar 
     #diminui o saldo da quantia
     function Retirar ($quantia){
@@ -29,4 +42,10 @@ Class Conta {
     function ObterSaldo(){
         return $this->Saldo;
     }
+
+    #metodo destrutor
+    #finaliza o objeto
+    #function __destruct(){
+    #    echo
+    #}
 }
