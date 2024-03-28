@@ -1,5 +1,5 @@
 <?php
-Class Conta {
+abstract Class Conta {
     public $Agencia;
     public $Codigo;
     public $DataDeCriacao;
