@@ -1,6 +1,6 @@
 <?php
 
-class ContaPoupanca extends Conta{
+ final class ContaPoupanca extends Conta{
     public $Aniversario;
 
     #construtor
@@ -10,7 +10,11 @@ class ContaPoupanca extends Conta{
          parent::__construct($agencia, $codigo, $dataDeCriacao, $titular, $senha, $saldo);
          $this->Aniversario = $aniversario;
     }
-
+    function Transferir($Conta, $Valor){
+        if ($this->Retirar($Valor)){
+            $Conta->Depositar($Valor);
+        }
+    }
     function Retirar($quantia){
         if ($this->Saldo  >= $quantia){
             #executa o metodo da classe pai
@@ -19,6 +23,8 @@ class ContaPoupanca extends Conta{
             echo "Retirada não Permitida...<br>";
             return false;
         }
+
+   
 
     #retirada permitida
     return true;

@@ -43,6 +43,8 @@ abstract Class Conta {
         return $this->Saldo;
     }
 
+    abstract function Transferir($Conta, $Valor);
+
     #metodo destrutor
     #finaliza o objeto
     function __destruct(){
