@@ -18,3 +18,6 @@ class Aplicacao extends Biblioteca{
 
 #acessa as constantes externamente
 echo Biblioteca::Nome . Aplicacao::Ambiente . Aplicacao::Versao . "<br>";
+
+new Aplicacao("Dia");
+new Aplicacao("Gimp");
