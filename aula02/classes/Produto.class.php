@@ -4,6 +4,7 @@ class Produto{
     public $Descricao;
     public $Preco;
     public $Quantidade;
+    public $Fornecedor;
 
     function ImprimeEtiqueta(){
         print "Código: ".$this->Codigo."<br>"; #. concatena
