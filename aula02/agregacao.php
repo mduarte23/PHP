@@ -3,7 +3,7 @@ include_once 'classes/Cesta.class.php';
 include_once 'classes/Produto.class.php';
 
 $produto1 = new Produto;
-$produto2 = new Produdo;
+$produto2 = new Produto;
 $produto3 = new Produto;
 $produto4 = new Produto;
 
@@ -22,3 +22,18 @@ $produto3->Preco = 2.86;
 $produto4->Codigo = 4;
 $produto4->Descricao = 'Laranja';
 $produto4->Preco = 1.14;
+
+$cesta = new Cesta;
+$cesta->AdicionaItem($produto1);
+$cesta->AdicionaItem($produto2);
+$cesta->AdicionaItem($produto3);
+$cesta->AdicionaItem($produto4);
+
+echo 'Valor total da cesta';
+echo $cesta->CalculaTotal();
+echo '<br>';
+echo '---------------------';
+echo '<br>';
+echo 'Lista de produtos';
+echo '<br>';
+echo $cesta->ExibeLista();
