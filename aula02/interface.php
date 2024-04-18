@@ -2,7 +2,7 @@
 #interface aluno
 interface IAluno{
     function getNome();
-
+    
     function setNome($nome);
 }
 
